@@ -65,8 +65,10 @@ def calculate_sha256(data):
 # Changes working directory
 user_folder = os.getlogin()
 os.chdir('/home/' + user_folder + '/Documents/')
+print(color.GREEN + 'This tool creates a printable paper wallet getting entropy from your microphone' + color.END)
 # Alert, check mike
 print(color.RED + 'Note that this tool may have undesired results with not properly working hardware. Check your hardware before continuing' + color.END)
+print(color.YELLOW + 'You could use the MicCheck tool or try to record something with the gnome-recorder' + color.END)
 input('Press enter to continue...')
 duration = 30  # Duration in seconds
 recording, fs = record_audio(duration)
