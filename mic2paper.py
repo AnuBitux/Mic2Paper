@@ -62,6 +62,10 @@ def calculate_sha256(data):
     sha256_hash = hashlib.sha256(data)
     return sha256_hash.hexdigest()
 
+# Changes working directory
+user_folder = os.getlogin()
+os.chdir('/home/' + user_folder + '/Documents/')
+# Alert, check mike
 print(color.RED + 'Note that this tool may have undesired results with not properly working hardware. Check your hardware before continuing' + color.END)
 input('Press enter to continue...')
 duration = 30  # Duration in seconds
@@ -240,7 +244,7 @@ if qr:
     ft.write('<p></p><p></p><p><em>Made with Mic2Seed<br>More info at https://anubitux.org</em></p>')
     ft.write('</body>')
     ft.close()
-    pdfkit.from_file('PaperWallet/temp.html', 'PaperWallet/paperwallet.pdf', options={"enable-local-file-access": ""})
+    pdfkit.from_file('/home/' + user_folder + '/Documents/PaperWallet/temp.html', '/home/' + user_folder + '/Documents/PaperWallet/paperwallet.pdf', options={"enable-local-file-access": ""})
     os.remove('PaperWallet/temp.html')
     print(color. DARKCYAN + '\nYour paper wallet can be found in the PaperWallet directory in the DiceTracker.py folder' + color.END)
 print('')
