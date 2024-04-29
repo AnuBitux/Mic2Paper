@@ -248,5 +248,5 @@ if qr:
     ft.close()
     pdfkit.from_file('/home/' + user_folder + '/Documents/PaperWallet/temp.html', '/home/' + user_folder + '/Documents/PaperWallet/paperwallet.pdf', options={"enable-local-file-access": ""})
     os.remove('PaperWallet/temp.html')
-    print(color. DARKCYAN + '\nYour paper wallet can be found in the PaperWallet directory in the DiceTracker.py folder' + color.END)
+    print(color. DARKCYAN + '\nYour paper wallet can be found in the PaperWallet directory in the Documents folder' + color.END)
 print('')
