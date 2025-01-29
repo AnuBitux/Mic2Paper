@@ -1,6 +1,6 @@
 numpy
 sounddevice
-hdwallet
+hdwallet==2.2.1
 monero
 pdfkit
 qrcode
